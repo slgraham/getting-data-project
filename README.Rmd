@@ -1,0 +1,43 @@
+---
+title: "README.md"
+output: html_document
+---
+
+The purpose of this analysis was to summarize the means and standard deviations of the metrics captured in the Human Activity Recognition Using Smartphones Data Set within a tidy dataset. 
+
+This README document outlines how the tidy dataset was produced from the original dataset. 
+
+The analysis was executed in the following steps:
+
+### Step 0: Downloaded original data
+
+The original data was downloaded from the following URL and unzipped. <https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip>
+
+### Step 1: Merged training and test datasets into a combined dataset
+
+explain how this happened
+
+### Step 2: Extracted only the variables which represent mean or standard deviation of the metrics.
+
+explain how this happened
+
+### Step 3: Recoded the activity levels with more descriptive labels
+
+explain logic behind this
+
+### Step 4: Renamed the variables to make them more descriptive and valid variable names within R.
+
+explain logic behind this
+reference codebook
+
+### Step 5: Summarized the mean of these variables for each subject and activity within a tidy dataset.
+
+explain why dataset is tidy
+reference txt file
+
+To read the tidy dataset back into R, use the following code (assumes the tidy dataset exists in your working directory):
+
+```{r}
+read.csv()
+```
+
