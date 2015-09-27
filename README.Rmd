@@ -1,17 +1,17 @@
 ---
-title: "README.md"
+title: "README"
 output: html_document
 ---
 
 The purpose of this analysis was to summarize the means and standard deviations of the feature measurements taken in the Human Activity Recognition Using Smartphones Data Set within a tidy dataset. 
 
-This README document outlines how the tidy dataset was produced from the original dataset. 
+This document outlines how the tidy dataset was produced from the original dataset. 
 
 The analysis was executed in the following steps:
 
 ### Step 0: Downloaded original data
 
-The original data was downloaded from the following URL and unzipped. <https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip>
+The original data and associated files were downloaded from the following URL and unzipped. <https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip>
 
 ### Step 1: Merged training and test datasets into a combined dataset
 
@@ -23,21 +23,30 @@ Only measurement variables with "mean()" or "std()" in the name were selected.
 
 ### Step 3: Recoded the activity levels with more descriptive labels
 
-
+Activity labels were applied based on the activity_labels.txt file
 
 ### Step 4: Renamed the variables to make them more descriptive and valid variable names within R.
 
-Original feature measurement variable names were taken from the ...
-reference codebook
+Original feature measurement variable names were taken from the features.txt file. Based on descriptions in the features_info.txt file, the following changes were made to the feature measurement variables:
+
+* Dashes were removed
+* "mean()" was changed to "Mean"
+* "std()" was changed to "STD"
+* "acc" was lengthened to "Accelerometer"
+
+See the code book for more detail on how variable names should be interpeted.
 
 ### Step 5: Summarized the mean of these variables for each subject and activity within a tidy dataset.
 
-explain why dataset is tidy
+This dataset conforms to the wide form of the tidy data protocol:
+* Each column corresponds to a single variable, in this case the mean of the selected feature measurements. 
+* Each row corresponds to a single observation, in this case one activity for each subject.
 
 To download the dataset to your working directory and read it into R, use the following code:
 
-```{r}
-download.file("https://github.com/slgraham/getting-data-project/blob/master/tidy_data.txt", "tidy_data.txt", method = "curl")
+```{r, eval = FALSE, tidy = TRUE}
+download.file("https://github.com/slgraham/getting-data-project/blob/master/tidy_data.txt", 
+        "tidy_data.txt", method = "curl")
 df <- read.table("tidy_data.txt")
 ```
 

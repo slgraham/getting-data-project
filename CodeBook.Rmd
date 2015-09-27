@@ -1,0 +1,50 @@
+---
+title: "CodeBook"
+output: html_document
+---
+
+## Code Book
+
+Subject - subject ID
+
+Activity - factor
+        Walking
+        Walking Upstairs
+        Walking Downstairs
+        Sitting
+        Standing
+        Laying
+        
+All other variables are summaries of the mean and standard deviation calculations of the measurements in the original dataset. These variables hold the mean of the calculations for each activity for each subject. 
+
+##### Features
+
+tBodyAccelerometer-XYZ
+tGravityAccelerometer-XYZ
+tBodyAccelerometerJerk-XYZ
+tBodyGyro-XYZ
+tBodyGyroJerk-XYZ
+tBodyAccelerometerMag
+tGravityAccelerometerMag
+tBodyAccelerometerJerkMag
+tBodyGyroMag
+tBodyGyroJerkMag
+fBodyAccelerometer-XYZ
+fBodyAccelerometerJerk-XYZ
+fBodyGyro-XYZ
+fBodyAccelerometerMag
+fBodyAccelerometerJerkMag
+fBodyGyroMag
+fBodyGyroJerkMag
+
+##### Variable descriptions
+
+* "Gyro" variables represent measurements captured from the phone's gyroscope
+* "Accelerometer" variables represent measurements captured from the phone's accelerometer
+* "t" denotes variables in the time domain
+* "f" denotes variables in the frequency domain
+* Features tagged with "XYZ" are split into three variables, one each for the X, Y, and Z dimensions
+* "Mean" denotes mean of the measurement
+* "STD" denotes standard deviatiation of the measurement
+
+

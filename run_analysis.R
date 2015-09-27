@@ -90,11 +90,6 @@ tidy_data <- merged_data %>% group_by(Subject, Activity) %>%
 # save the tidy dataset to disk as a txt file
 write.table(tidy_data, file = "tidy_data.txt", row.names = FALSE)
 
-## Step 6: Create a README file explaining how the script works
-
-## Step 7: Create a code book describing the variables
-
-
 
 
 
