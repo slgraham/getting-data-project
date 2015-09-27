@@ -3,7 +3,7 @@ title: "README.md"
 output: html_document
 ---
 
-The purpose of this analysis was to summarize the means and standard deviations of the metrics captured in the Human Activity Recognition Using Smartphones Data Set within a tidy dataset. 
+The purpose of this analysis was to summarize the means and standard deviations of the feature measurements taken in the Human Activity Recognition Using Smartphones Data Set within a tidy dataset. 
 
 This README document outlines how the tidy dataset was produced from the original dataset. 
 
@@ -15,29 +15,29 @@ The original data was downloaded from the following URL and unzipped. <https://d
 
 ### Step 1: Merged training and test datasets into a combined dataset
 
-explain how this happened
+Created a combined dataset by first column-binding the X_*.txt (feature measurement variables), y_*.txt (activities variable), and subject_*.txt (subject list) together for each of the /test and /train directories, and then row-binding the resulting datasets together.
 
 ### Step 2: Extracted only the variables which represent mean or standard deviation of the metrics.
 
-explain how this happened
+Only measurement variables with "mean()" or "std()" in the name were selected. 
 
 ### Step 3: Recoded the activity levels with more descriptive labels
 
-explain logic behind this
+
 
 ### Step 4: Renamed the variables to make them more descriptive and valid variable names within R.
 
-explain logic behind this
+Original feature measurement variable names were taken from the ...
 reference codebook
 
 ### Step 5: Summarized the mean of these variables for each subject and activity within a tidy dataset.
 
 explain why dataset is tidy
-reference txt file
 
-To read the tidy dataset back into R, use the following code (assumes the tidy dataset exists in your working directory):
+To download the dataset to your working directory and read it into R, use the following code:
 
 ```{r}
-read.csv()
+download.file("https://github.com/slgraham/getting-data-project/blob/master/tidy_data.txt", "tidy_data.txt", method = "curl")
+df <- read.table("tidy_data.txt")
 ```
 

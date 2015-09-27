@@ -29,7 +29,7 @@ mergeFilesOfHalf <- function(directory = data_directory, half) {
         features <<- as.character(read.table(features_path)[,2])
         
         
-        ## read subject, X, and y files into R and bind them into DT
+        ## read subject, X, and y files into R
 
         subjects <- read.table(paste(half_path, "/", "subject", "_", half, 
                                     ".txt" , sep = ""))
